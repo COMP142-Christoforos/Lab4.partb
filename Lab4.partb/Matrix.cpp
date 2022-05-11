@@ -61,3 +61,21 @@ double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
     cout << "Sum of Column = " << sum;
     return sum;
 }
+
+/** Fuction <code>fillWithRandomNum</code>show the randmo matrix.
+*<BR>
+*@param mat the matrix.
+*@param maxRow the number of rows in the matrix.
+*/
+void fillWithRandomNum(double mat[][MAX_COL], const int maxRow)
+{
+    assert(maxRow > 0);
+    for (int i = 0; i < maxRow; ++i) {
+        for (int j = 0; j < MAX_COL; ++j) {
+            mat[i][j] = rand() % 49;// range 0-50.
+
+        }
+
+    }
+
+}

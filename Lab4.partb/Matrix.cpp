@@ -78,6 +78,16 @@ void fillWithRandomNum(double mat[][MAX_COL], const int maxRow)
     }
 }
 
+/**
+ * The <code>sumOfRows</code> function sums up the values of all the rows and
+ * return this as a single dimention array.
+ * NOTE: return value is dynamically allocated caller must delete it.
+ * <BR>
+ * @param mat The matrix.
+ * @param maxRow How many rows the matrix have.
+ * @return Returns a single dimention array of size <code>maxRow</code>,
+ * which MUST be deleted by the caller.
+ */
 double* sumOfRows(const double mat[][MAX_COL], const int maxRow) {
     double* retValues;
 
@@ -89,4 +99,27 @@ double* sumOfRows(const double mat[][MAX_COL], const int maxRow) {
     }
 
     return retValues;
+}
+
+/**
+ * The <code>isIdentityMatrix</code> function checks if the matrix is an
+ * identity matrix.
+ * <BR>
+ * @param mat The matrix.
+ * @param maxRow How many rows the matrix have.
+ * @return Returns <code>true</code> if this is an identity matrix.
+ */
+bool isIdentityMatrix(const double mat[][MAX_COL], const int maxRow) {
+    if (MAX_COL != maxRow)
+        return false; // Identity matrix must be a square matrix
+
+    for (int i = 0; i < maxRow; ++i) {
+        for (int j = 0; j < maxRow; ++j) {
+            if (i == j && mat[i][j] != 1)
+                return false;
+            else if (i != j && mat[i][j] != 0)
+                return false;
+        }
+    }
+    return true;
 }

@@ -14,3 +14,4 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow);
 double* sumOfRows(const double mat[][MAX_COL], const int maxRow);
 
 #endif
+ 

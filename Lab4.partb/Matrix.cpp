@@ -75,7 +75,18 @@ void fillWithRandomNum(double mat[][MAX_COL], const int maxRow)
             mat[i][j] = rand() % 49;// range 0-50.
 
         }
+    }
+}
 
+double* sumOfRows(const double mat[][MAX_COL], const int maxRow) {
+    double* retValues;
+
+    retValues = new double[maxRow] {0};
+    assert(retValues >= 0);
+    for (int i = 0; i < maxRow; ++i) {
+        for (int j = 0; j < MAX_COL; ++j)
+            retValues[i] += mat[i][j];
     }
 
+    return retValues;
 }

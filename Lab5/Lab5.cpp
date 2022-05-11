@@ -9,7 +9,6 @@ namespace Lab5
 	TEST_CLASS(Lab5)
 	{
 	public:
-
 		TEST_METHOD(TestMethodForSumOfRow)
 		{
 			// double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
@@ -27,7 +26,6 @@ namespace Lab5
 			Assert::AreEqual(0.0, sum0);
 		}
 
-		//used to Test
 		TEST_METHOD(TestMethodForfillWithRandomNum)
 		{
 			// void fillWithRandomNum(double mat[][MAX_COL], const int maxRow)
@@ -45,23 +43,27 @@ namespace Lab5
 			// Assert
 			Assert::AreNotEqual(3.0, sum3);
 			Assert::AreNotEqual(0.0, sum2);
+
 		}
-	
-		TEST_METHOD(TestMethodFormakeIdentityMatrix)
-		{
-			// bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow)
 
-			// Arrange
-			const int MAX_ROW = 5;
-			double matrix[MAX_ROW][MAX_COL] = { 0 };
-			bool apa;
+			TEST_METHOD(TestMethodFormakeIdentityMatrix)
+			{
+				// bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow)
 
-			// Act
-			apa = makeIdentityMatrix(matrix, MAX_ROW);
+				// Arrange
+				const int MAX_ROW = 5;
+				double matrix[MAX_ROW][MAX_COL] = { 0 };
+				bool apa;
 
-			// Assert
-			Assert::IsFalse(3.0);
-		}
+				// Act
+				apa = makeIdentityMatrix(matrix, MAX_ROW);
+
+				// Assert
+				Assert::IsTrue(3.0);
+
+			}
+		
+		
 	};
 
 }

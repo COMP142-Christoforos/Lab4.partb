@@ -44,3 +44,20 @@ double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow) {
     cout << "Sum of Row = " << sum;
     return sum;
 }
+
+/** Fuction <code>sumOfCol</code>show the sum of the column.
+*<BR>
+*@param mat the matrix.
+*@param column the number of column.
+*@param maxRow the number of rows in the matrix.
+*/
+double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
+{
+    assert(column >= 0 && column < MAX_COL);
+    double sum = 0.0;
+    for (int i = 0; i < maxRow; i++) {
+        sum += mat[i][column];
+    }
+    cout << "Sum of Column = " << sum;
+    return sum;
+}

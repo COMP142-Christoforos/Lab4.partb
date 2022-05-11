@@ -1,5 +1,5 @@
 /** \file Matrix.cpp
-*\bried Headers file from small mattrix library
+*\bried Implementation file from small mattrix library
 *\Athur Christoforos Chari
 *\Date 08/04/2022
 */

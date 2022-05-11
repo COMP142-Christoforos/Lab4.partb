@@ -12,6 +12,7 @@ namespace Lab5
 		
 		TEST_METHOD(TestMethod1)
 		{
+
 		}
 	};
 }
